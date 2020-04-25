@@ -8,7 +8,7 @@
 
 
   export default {
-    name: 'Money.vue',
+    name: 'Money',
   };
 </script>
 

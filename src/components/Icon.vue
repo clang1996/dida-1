@@ -10,7 +10,7 @@
   try {
     importAll(require.context('../assets/icons', true, /\.svg$/));
   } catch (error) {
-    console.log(error);
+    console.error('error');
   }
   export default {
     props:['name'],
@@ -23,7 +23,7 @@
     height: 1em;
     width: 1em;
     vertical-align:-0.15em;
-    /*fill:currentColor;*/
+    fill:currentColor;
     overflow: hidden;
   }
 </style>

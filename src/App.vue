@@ -15,7 +15,7 @@
   }
   a{
     text-decoration-line: none;
-    color:inherit
+    color:inherit;
   }
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
