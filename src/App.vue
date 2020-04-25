@@ -10,6 +10,13 @@
     margin:0;
     box-sizing: border-box;
   }
+  body{
+    /*line-height: 1.5em;*/
+  }
+  a{
+    text-decoration-line: none;
+    color:inherit
+  }
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
