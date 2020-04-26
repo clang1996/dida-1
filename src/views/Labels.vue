@@ -7,7 +7,7 @@
 
 <script lang="ts">
   export default {
-    name: 'label',
+    name: 'labels',
   };
 </script>
 

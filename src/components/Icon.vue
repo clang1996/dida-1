@@ -10,7 +10,7 @@
   try {
     importAll(require.context('../assets/icons', true, /\.svg$/));
   } catch (error) {
-    console.error('error');
+    console.log('error');
   }
   export default {
     props:['name'],
