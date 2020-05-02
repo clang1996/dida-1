@@ -59,7 +59,7 @@
     ok() {
       this.$emit('update:value', this.output);
       this.$emit('submit', this.output);
-      this.output = '0';
+      this.output = '0';  //点OK清空output，不太好
     }
   };
 </script>
