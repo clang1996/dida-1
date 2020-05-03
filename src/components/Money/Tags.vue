@@ -7,7 +7,7 @@
       </li>
     </ul>
     <div class="new">
-      <button @click="create">新增标签</button>
+      <Button @click="create">新增标签</Button>
     </div>
   </div>
 </template>
