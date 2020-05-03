@@ -49,7 +49,7 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-
+    background: white;
     > .new {
       padding-top: 16px;
 

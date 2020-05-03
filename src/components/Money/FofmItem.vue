@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label class="notes">
+    <label class="formItem">
       <span class="name">{{fieldName}}</span>
       <input type="text"
              :value="value"
@@ -28,9 +28,8 @@
 </script>
 
 <style lang="scss" scoped>
-  .notes {
+  .formItem {
     font-size: 14px;
-    background-color: #f5f5f5;
     padding-left: 16px;
     display: flex;
     align-items: center;
@@ -40,7 +39,7 @@
     }
 
     input {
-      height: 64px;
+      height: 40px;
       flex-grow: 1;
       background-color: transparent;
       border: none;
