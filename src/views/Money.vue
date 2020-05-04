@@ -53,14 +53,12 @@
     }
 
     saveRecord() {
-      const record2: RecordItem = recordListModel.clone(this.record);
-      record2.createAt = new Date();
-      this.tagList.push(record2);
+    recordListModel.create(this.record)
     }
 
     @Watch('recordList')
     onRecordListChange() {
-      recordListModel.save(this.tagList);
+      recordListModel.save();
     }
   }
 </script>
