@@ -22,8 +22,9 @@
     selectedTags: string[] = [];
 
     toggle(tag: string) {
-      if (this.selectedTags.indexOf(tag) >= 0) {
-        this.selectedTags.splice(this.selectedTags.indexOf(tag), 1);
+      const index = this.selectedTags.indexOf(tag)
+      if (index >= 0) {
+        this.selectedTags.splice(index, 1);
       } else {
         this.selectedTags.push(tag);
       }
@@ -33,6 +34,7 @@
     create() {
       const name = window.prompt('输入标签名');
       if (name === '') {
+        window.alert('标签名不能为空')
       } else if (this.dataSource) {
         this.$emit('update:dataSource', [...this.dataSource, name]);
       }
