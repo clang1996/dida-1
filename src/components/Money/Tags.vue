@@ -14,35 +14,36 @@
 
 <script lang="ts">
   import Vue from 'vue';
-  import {Component, Prop} from 'vue-property-decorator';
+  import {Component} from 'vue-property-decorator';
 
   @Component({
-    computed:{
-      tagList(){
-       return []
-        // TODO
-        // this.$store.fetchTags();
+    computed: {
+      tagList() {
+        return this.$store.state.tagList;
       }
     }
   })
   export default class Tags extends Vue {
     selectedTags: string[] = [];
 
+    $created() {
+      this.$store.commit('fetchTags');
+    }
+
     toggle(tag: string) {
-      const index = this.selectedTags.indexOf(tag)
+      const index = this.selectedTags.indexOf(tag);
       if (index >= 0) {
         this.selectedTags.splice(index, 1);
       } else {
         this.selectedTags.push(tag);
       }
-      this.$emit('update:value', this.selectedTags)
+      this.$emit('update:value', this.selectedTags);
     }
 
     create() {
       const name = window.prompt('输入标签名');
-      if (!name) {return window.alert('标签名不能为空')}
-      // TODO
-      // store.createTag(name)
+      if (!name) {return window.alert('标签名不能为空');}
+      this.$store.commit('createTag', name);
     }
   }
 
@@ -57,6 +58,7 @@
     flex-grow: 1;
     flex-direction: column;
     background: white;
+
     > .new {
       padding-top: 16px;
 
