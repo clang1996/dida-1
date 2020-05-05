@@ -15,3 +15,9 @@ module.exports = {
     config.module.rule('svg').exclude.add(dir)
   }
 }
+// module.exports = {
+//   devServer: {
+//     host: '0.0.0.0',
+//     port: 8080,
+//   }
+// }
