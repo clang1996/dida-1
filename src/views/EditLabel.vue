@@ -24,48 +24,37 @@
 
   @Component({
     components: {Button, FormItem},
-    //   computed:{
-    //     tag(){
-    //       return this.$store.state.currentTag
-    //     }
-    //   }
-    })
-    export default class EditLabel extends Vue {
-      get tag() {
-        return this.$store.state.currentTag;
-      }
+  })
+  export default class EditLabel extends Vue {
+    get tag() {
+      return this.$store.state.currentTag;
+    }
 
-      created() {
-        const id = this.$route.params.id;
-        this.$store.commit('setCurrentTag', id);
-        if (!this.tag) {
-          this.$router.replace('/404');
-        }
-      }
-
-      update(name: string) {
-        if (this.tag) {
-          //TODO
-          // store.updateTag(this.tag.id, name);
-        }
-      }
-
-      remove() {
-        if (this.tag) {
-          return;
-          //TODO
-          // if(store.removeTag(this.tag.id)){
-          //   this.$router.back();
-          // }else{
-          //   window.alert('删除失败')
-          // }
-        }
-      }
-
-      goBack() {
-        this.$router.back();
+    created() {
+      const id = this.$route.params.id;
+      this.$store.commit('fetchTags');
+      this.$store.commit('setCurrentTag', id);
+      if (!this.tag) {
+        this.$router.replace('/404');
       }
     }
+
+    update(name: string) {
+      if (this.tag) {
+        this.$store.commit('updateTag', {id: this.tag.id, name});
+      }
+    }
+
+    remove() {
+      if (this.tag) {
+        this.$store.commit('removeTag', this.tag.id);
+      }
+    }
+
+    goBack() {
+      this.$router.back();
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
