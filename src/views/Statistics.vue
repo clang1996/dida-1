@@ -15,7 +15,7 @@
   import {Component} from 'vue-property-decorator';
   import Tabs from '@/components/Tabs.vue';
   import intervalList from '@/constants/intervalList';
-  import  recordTypeList from '@/constants/recordTypeList';
+  import recordTypeList from '@/constants/recordTypeList';
 
   @Component({
     components: {Tabs}
@@ -39,5 +39,9 @@
         display: none;
       }
     }
+  }
+
+  ::v-deep .interval-tabs-item {
+    height: 48px;
   }
 </style>
