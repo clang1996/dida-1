@@ -30,6 +30,7 @@
     get tags(){
       return this.$store.state.tagList;
     }
+
     beforeCreate() {
       this.$store.commit('fetchTags');
     }
