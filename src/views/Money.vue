@@ -1,5 +1,6 @@
 <template>
   <Layout class-prefix="layout">
+    {{record}}
     <Tags/>
     <div class="notes">
       <FormItem field-name="备注"
