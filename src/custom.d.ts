@@ -1,3 +1,8 @@
+type RootState = {
+  recordList: RecordItem[],
+  tagList: Tag[],
+  currentTag?: Tag
+}
 type RecordItem = {
   tags: Tag[];
   notes: string;
@@ -17,11 +22,7 @@ type TagListModel = {
   remove: (id: string) => boolean
   save: () => void
 }
-type RootState = {
-  recordList: RecordItem[],
-  tagList: Tag[],
-  currentTag?: Tag
-}
+
 
 interface Window {
 
