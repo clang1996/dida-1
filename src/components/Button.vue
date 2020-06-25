@@ -16,7 +16,7 @@
 
 <style lang="scss" scoped>
   .button {
-    background-color: #767676;
+    background-color: #4ebf80;
     color: white;
     border-radius: 4px;
     border: none;

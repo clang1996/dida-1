@@ -6,6 +6,7 @@ import store from './store';
 import Nav from '@/components/Nav.vue';
 import Layout from '@/components/Layout.vue';
 import Icon from '@/components/Icon.vue';
+import TagHelper from '@/mixins/TagHelper';
 
 Vue.config.productionTip = false;
 
@@ -37,3 +38,4 @@ if(document.documentElement.clientWidth>500){
   img.style.boxShadow='0 0 10px rgba(0,0,0,0.3)'
   document.body.appendChild(img)
 }
+

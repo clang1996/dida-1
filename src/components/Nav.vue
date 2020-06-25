@@ -40,7 +40,7 @@
       }
     }
     > .item.selected{
-      color: orangered;
+      color: #4ebf80;
     }
   }
 </style>

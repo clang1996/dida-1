@@ -81,7 +81,7 @@
         margin-right: 12px;
 
         &.selected {
-          background-color: orangered;
+          background-color: #4ebf80;
         }
       }
     }
