@@ -58,4 +58,4 @@ const tagStore = {
 
 tagStore.fetchTags();
 
-export default tagStore;
+export  {tagStore};

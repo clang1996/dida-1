@@ -13,7 +13,7 @@
   import Vue from 'vue';
   import {Component, Prop} from 'vue-property-decorator';
 
-  type DataSourceItem = { text: string, value: string }
+  type DataSourceItem = { text: string; value: string }
   @Component
   export default class Tabs extends Vue {
     @Prop({required: true, type: Array})
@@ -26,7 +26,7 @@
         selected: item.value === this.value,
         [this.classPrefix + '-tabs-item']: this.classPrefix
       };
-    };
+    }
 
     select(item: DataSourceItem) {
       this.$emit('update:value', item.value);

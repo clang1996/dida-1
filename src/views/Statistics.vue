@@ -22,7 +22,7 @@
 <script lang="ts">
   import Vue from 'vue';
   import {Component} from 'vue-property-decorator';
-  import Tabs from '@/components/Tabs.vue';
+  import Tabs from '@/views/Money/Tabs.vue';
   import recordTypeList from '@/constants/recordTypeList';
   import dayjs from 'dayjs';
   import clone from '@/lib/clone';
@@ -61,7 +61,7 @@
       const newList = clone(recordList)
         .filter(r => r.type === this.type)
         .sort((a, b) => dayjs(b.createAt).valueOf() - dayjs(a.createAt).valueOf());
-      type Result = { title: string, total?: number, items: RecordItem[] }[]
+      type Result = { title: string; total?: number; items: RecordItem[] }[]
       if (newList.length === 0) {return [];}
       const result: Result = [{title: dayjs(newList[0].createAt).format('YYYY-MM-DD'), items: [newList[0]]}];
       for (let i = 1; i < newList.length; i++) {
